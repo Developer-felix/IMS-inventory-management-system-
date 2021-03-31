@@ -6,7 +6,7 @@ class Device(models.Model):
     choices = (
         ('AVAILABLE', 'Item to be parchased'),
         ('SOLD', 'Item sold'),
-        ('RESOURCING','Item resourcing in a few days')
+        ('RESTOCKING', 'Item restocking in few days')
     )
     status = models.CharField(max_length=10, choices=choices, default="SOLD")
     issues = models.CharField(max_length=100, default="No issues")
